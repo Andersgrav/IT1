@@ -1,0 +1,46 @@
+body {
+    background-image: url(bilde-IT.png);
+    background-size: cover;
+}
+
+
+.tilbake {
+    text-decoration: none;
+    color: rgb(13, 134, 255);
+}
+
+.tilbake:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+img {
+    width: 600px;
+    float: right;
+    margin-right: 150px;
+}
+
+.liste1 {
+    list-style-type: square;
+    list-style-position: inside;
+    margin-left: 20%;
+}
+
+li {
+    padding-bottom: 5px;
+    font-size: larger;
+}
+
+div {
+    border: solid 3px rgb(43, 145, 254);
+    padding: 50px;
+    margin: 200px 300px 200px 300px;
+    background-color: rgba(43, 145, 254, 0.207);
+}
+
+/* Her bruker jeg ol>li slik at jeg endrer på li i ol, men ikk li i ul */
+ol>li {
+    font-weight: 900;
+    background-color: rgb(13, 134, 255);
+    width: fit-content;
+}
