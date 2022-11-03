@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 900;
+            
+        }
+    </style>
+</head>
+<body>
+    <input id="passordB" type="text">
+    <button onclick="passordSjekker()">Sjekk passord</button>
+    <p id="svar"></p>
+    <script>
+        function passordSjekker() {
+        var passord = "1234-Kul";
+
+        var passordB2 = document.getElementById("passordB").value;
+
+        if (passordB2 == passord) {
+            document.getElementById("svar").innerHTML = "Du valgte riktig passord!"
+        }
+        else if (passordB2 == "?lengde"){
+            document.getElementById("svar").innerHTML = "8"
+        }
+        else if (passordB2 == "?1"){
+            document.getElementById("svar").innerHTML = "1"
+        }
+        else if (passordB2 == "?2"){
+            document.getElementById("svar").innerHTML = "2"
+        }
+        else if (passordB2 == "?siste"){
+            document.getElementById("svar").innerHTML = "l"
+        }
+        else if (passordB2 == "?store"){
+            document.getElementById("svar").innerHTML = "1234-KUL"
+        }
+        else if (passordB2 == "?små"){
+            document.getElementById("svar").innerHTML = "1234-kul"
+        }
+        
+        
+        
+        else {
+            document.getElementById("svar").innerHTML = "Passordet er feil!"
+        }
+    }
+    </script>
+</body>
+</html>
