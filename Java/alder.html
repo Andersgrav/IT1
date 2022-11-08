@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tilfeldigTall;
+        tilfeldigTall = (Math.random() * 80)+1;
+        var alder = parseInt(tilfeldigTall);
+        console.log(alder);
+
+        if (alder <= 10){
+            alert("Du er ung")
+        }
+
+        else if (alder <= 20){
+            alert("Du er ungdom")
+        }
+
+        else if (alder < 67){
+            alert("Du er voksen")
+        }
+
+        else if(alder <= 75){
+            alert("Du er eldre")
+        }
+
+        else if(alder <= 100){
+            alert("Du er gammel")
+        }
+
+        else{
+            alert("Du er ekstremt gammel")
+        }
+
+        if(alder == 67){
+            ("Du er jammen blitt pensjonist i år")
+        }
+    </script>
+</body>
+</html>

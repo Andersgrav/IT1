@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            color: #333;
+            font-size: xx-large;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+<body>
+    <input id="timer" type="number">
+    <input id="minutter" type="number">
+    <input id="sekunder" type="number">
+<br>
+    <button onclick="sekunderCon()">Gjør om til sekunder</button>
+    <button onclick="minutterCon()">Gjør om til minutter</button>
+    <button onclick="timerCon()">Gjør om til timer</button>
+    <p id="svar"></p>
+
+    <script>
+        function sekunderCon() {
+        var timer = document.getElementById("timer").value;
+        timer *= 60**2;
+        var minutter = document.getElementById("minutter").value;
+        minutter *= 60
+        var sekunder = document.getElementById("sekunder").value;
+
+        var resultat = Number(timer) + Number(minutter) + Number(sekunder);
+        document.getElementById("svar").innerHTML = (resultat) + (" sek")
+        }
+    
+        function minutterCon() {
+        var timer = document.getElementById("timer").value;
+        timer *= 60;
+        var minutter = document.getElementById("minutter").value;
+        
+        var sekunder = document.getElementById("sekunder").value;
+        sekunder /= 60
+
+        var resultat = Number(timer) + Number(minutter) + Number(sekunder);
+        document.getElementById("svar").innerHTML = (resultat) + (" min")
+        }
+    
+        function timerCon() {
+        var timer = document.getElementById("timer").value;
+
+        var minutter = document.getElementById("minutter").value;
+        minutter /= 60
+
+        var sekunder = document.getElementById("sekunder").value;
+        sekunder /= 60**2
+
+        var resultat = Number(timer) + Number(minutter) + Number(sekunder);
+        document.getElementById("svar").innerHTML = (resultat) + (" timer")
+        }
+    </script>
+</body>
+</html>
