@@ -1,0 +1,55 @@
+.blaa {
+    border-radius: 50%;
+    border: solid #0085c7 4px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 0;
+}
+
+.svart {
+    border-radius: 50%;
+    border: solid #000000 4px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 0;
+    margin-left: 2px;
+}
+
+.rod {
+    border-radius: 50%;
+    border: solid #df0024 4px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 0;
+    margin-left: 2px;
+}
+
+.gul {
+    border-radius: 50%;
+    border: solid #f4c300 4px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 0;
+    margin-top: 30px;
+    margin-left: -174px;
+}
+
+.gronn {
+    border-radius: 50%;
+    border: solid #009f3d 4px;
+    width: 60px;
+    height: 60px;
+    flex-grow: 0;
+    margin-top: 30px;
+    margin-left: 2px;
+}
+
+#over {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    margin-left: 595px;
+    margin-top: 300px;
+}

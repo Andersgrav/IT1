@@ -1,0 +1,50 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#hoved {
+    width: 60%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    text-align: center;
+    border: solid 8px rgba(5, 238, 5, 0.667);
+}
+
+#meny {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    background-color: rgba(5, 238, 5, 0.667);
+    flex-grow: 1;
+    margin: 10px;
+    padding: 20px;
+    text-decoration: none;
+    flex-basis: 40px;
+    width: 200px;
+}
+
