@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="tilfeldigHilsen()"> Tilfeldighilsen</button>
+    <button onclick="kvadrat(9)">Kvadrat av 9</button>
+    <button onclick="sum(6, 4)">Sum av 6 og 4</button>
+    <button onclick="skrivUtGangetabell(10)">Gangetabell 10</button>
+    <button onclick="arealRektangel(-7, 9)">Areal rektangel</button>
+    <button onclick="trapes(3, 5, 2)">Areal av trapes</button>
+
+
+
+    <script>
+        function tilfeldigHilsen() {
+            console.clear();
+            const ordene = [
+                "Hei",
+                "Hallo",
+                "God dag"
+            ]
+
+            var ordet = parseInt(Math.random() * 3);
+            console.log(ordene[ordet])
+        }
+
+
+        function kvadrat(a) {
+            console.clear();
+            console.log(a * a)
+        }
+
+
+        function sum(a, b) {
+            console.clear();
+            console.log(a + b)
+        }
+
+
+        function skrivUtGangetabell(tall) {
+            console.clear();
+            for (let i = 1; i < 11; i++) {
+                console.log(tall * i)
+            }
+        }
+
+
+
+        function arealRektangel(l, b) {
+            console.clear();
+
+            if (typeof l === 'string') {
+                console.log("Skriv inn et tall!")
+            }
+            else if (typeof b, l <= 0) {
+                console.log("Bare positive tall!")
+            }
+            else if (typeof b === 'string') {
+                console.log("Skriv inn et tall!")
+            }
+            else {
+                return l * b
+            }
+        }
+
+
+        function trapes(a, b, h) {
+            console.clear();
+            console.log((a + b) / 2 * h)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+
+</head>
+<h1>Generer et random ord</h1>
+<button onclick="ord()">Generer ord</button>
+<h3 id="svar"></h3>
+
+<body>
+    <script>
+        function ord() {
+            const vokaler = [
+                "a",
+                "e",
+                "i",
+                "o",
+                "u",
+                "y",
+                "æ",
+                "ø",
+                "å",
+            ]
+            const konsonanter = [
+                "b",
+                "c",
+                "d",
+                "f",
+                "g",
+                "h",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n",
+                "p",
+                "q",
+                "r",
+                "s",
+                "t",
+                "v",
+                "w",
+                "x",
+                "z"
+            ]
+        var tilfeldigVokal = parseInt( Math.random()*9);
+        var tilfeldigKonsonant = parseInt( Math.random()*17);
+        var tilfeldigVokal1 = parseInt( Math.random()*9);
+        var tilfeldigKonsonant1 = parseInt( Math.random()*17);
+
+        var resultat = vokaler[tilfeldigVokal] + konsonanter[tilfeldigKonsonant] + vokaler[tilfeldigVokal1] + konsonanter[tilfeldigKonsonant1];
+        document.getElementById("svar").innerHTML = resultat;
+        }
+    </script>
+</body>
+
+</html>

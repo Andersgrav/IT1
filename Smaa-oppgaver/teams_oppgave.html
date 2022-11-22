@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Forskjellige så løkker i teams</h1>
+    <button onclick="tall100()">Tall 0-100 uten tiere</button>
+    <button onclick="gangen8()">Første 50 tall i 8-gangen</button>
+    <button onclick="lilleGangetabell()">Lille gangetabell</button>
+    <script>
+        
+        function tall100() {
+            console.clear();
+            var tall = 0;
+
+            while (tall < 100) {
+                console.log(tall)
+                tall++;
+                if (tall / 10 == parseInt(tall / 10)) {
+                    tall++;
+                }
+            }
+        }
+
+
+
+        function gangen8() {
+            console.clear();
+            var gangen8;
+            for (let i = 1; i <= 50; i++) {
+                gangen8 = i
+                gangen8 *= 8
+                console.log(gangen8)
+            }
+        }
+
+        function lilleGangetabell() {
+            console.clear();
+            for (let x = 1; x <= 10; x++) {
+                for (let y = 1; y <= 10; y++) {
+                    t = y
+                    t *= x
+                    console.log(t)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
