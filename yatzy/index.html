@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <nav>
+        <button id="terningen">Kast terningene</button>
+        <button onclick="spillere()">Legg til spillere</button>
+    </nav>
+    <main>
+        <section>
+            <img id="imgTernin1" src="" class="terningSvar" onclick="gronn(1)">
+            <img id="imgTernin2" src="" class="terningSvar" onclick="gronn(2)">
+            <img id="imgTernin3" src="" class="terningSvar" onclick="gronn(3)">
+            <img id="imgTernin4" src="" class="terningSvar" onclick="gronn(4)">
+            <img id="imgTernin5" src="" class="terningSvar" onclick="gronn(5)">
+        </section>
+    </main>
+    <section id="tabell">
+        <div class="ytreRad" style="font-weight: 700;">Deltakere</div>
+        <div class="deltaker" onclick="spillere()"></div>
+        <div class="deltaker" onclick="spillere()"></div>
+        <div class="deltaker" onclick="spillere()"></div>
+        <div class="deltaker" onclick="spillere()"></div>
+        <div class="ytreRad">Enere</div>
+        <div class="rad1 kolonne1" onclick="lagre(1,1)"></div>
+        <div class="rad1 kolonne2" onclick="lagre(1,2)"></div>
+        <div class="rad1 kolonne3" onclick="lagre(1,3)"></div>
+        <div class="rad1 kolonne4" onclick="lagre(1,4)"></div>
+        <div class="ytreRad">Toere</div>
+        <div class="rad2 kolonne1" onclick="lagre(2,1)"></div>
+        <div class="rad2 kolonne2" onclick="lagre(2,2)"></div>
+        <div class="rad2 kolonne3" onclick="lagre(2,3)"></div>
+        <div class="rad2 kolonne4" onclick="lagre(2,4)"></div>
+        <div class="ytreRad">Treere</div>
+        <div class="rad3 kolonne1" onclick="lagre(3,1)"></div>
+        <div class="rad3 kolonne2" onclick="lagre(3,2)"></div>
+        <div class="rad3 kolonne3" onclick="lagre(3,3)"></div>
+        <div class="rad3 kolonne4" onclick="lagre(3,4)"></div>
+        <div class="ytreRad">Firere</div>
+        <div class="rad4 kolonne1" onclick="lagre(4,1)"></div>
+        <div class="rad4 kolonne2" onclick="lagre(4,2)"></div>
+        <div class="rad4 kolonne3" onclick="lagre(4,3)"></div>
+        <div class="rad4 kolonne4" onclick="lagre(4,4)"></div>
+        <div class="ytreRad">Femmere</div>
+        <div class="rad5 kolonne1" onclick="lagre(5,1)"></div>
+        <div class="rad5 kolonne2" onclick="lagre(5,2)"></div>
+        <div class="rad5 kolonne3" onclick="lagre(5,3)"></div>
+        <div class="rad5 kolonne4" onclick="lagre(5,4)"></div>
+        <div class="ytreRad">Seksere</div>
+        <div class="rad6 kolonne1" onclick="lagre(6,1)"></div>
+        <div class="rad6 kolonne2" onclick="lagre(6,2)"></div>
+        <div class="rad6 kolonne3" onclick="lagre(6,3)"></div>
+        <div class="rad6 kolonne4" onclick="lagre(6,4)"></div>
+        <div class="ytreRad" style="font-weight: 700;">Sum</div>
+        <div class="rad7 kolonne1" onclick="summer(1)"></div>
+        <div class="rad7 kolonne2" onclick="summer(2)"></div>
+        <div class="rad7 kolonne3" onclick="summer(3)"></div>
+        <div class="rad7 kolonne4" onclick="summer(4)"></div>
+        <div class="ytreRad">Bonus</div>
+        <div class="rad8 kolonne1"></div>
+        <div class="rad8 kolonne2"></div>
+        <div class="rad8 kolonne3"></div>
+        <div class="rad8 kolonne4"></div>
+        <div class="ytreRad">1 par</div>
+        <div class="rad9 kolonne1" onclick="par1(9,1)"></div>
+        <div class="rad9 kolonne2" onclick="par1(9,2)"></div>
+        <div class="rad9 kolonne3" onclick="par1(9,3)"></div>
+        <div class="rad9 kolonne4" onclick="par1(9,4)"></div>
+        <div class="ytreRad">2 par</div>
+        <div class="rad10 kolonne1" onclick="par2(10,1)"></div>
+        <div class="rad10 kolonne2" onclick="par2(10,2)"></div>
+        <div class="rad10 kolonne3" onclick="par2(10,3)"></div>
+        <div class="rad10 kolonne4" onclick="par2(10,4)"></div>
+        <div class="ytreRad">3 like</div>
+        <div class="rad11 kolonne1" onclick="like3(11,1)"></div>
+        <div class="rad11 kolonne2" onclick="like3(11,2)"></div>
+        <div class="rad11 kolonne3" onclick="like3(11,3)"></div>
+        <div class="rad11 kolonne4" onclick="like3(11,4)"></div>
+        <div class="ytreRad">4 like</div>
+        <div class="rad12 kolonne1" onclick="like4(12,1)"></div>
+        <div class="rad12 kolonne2" onclick="like4(12,2)"></div>
+        <div class="rad12 kolonne3" onclick="like4(12,3)"></div>
+        <div class="rad12 kolonne4" onclick="like4(12,4)"></div>
+        <div class="ytreRad">Liten Straight</div>
+        <div class="rad13 kolonne1" onclick="litenStraight(13,1)"></div>
+        <div class="rad13 kolonne2" onclick="litenStraight(13,2)"></div>
+        <div class="rad13 kolonne3" onclick="litenStraight(13,3)"></div>
+        <div class="rad13 kolonne4" onclick="litenStraight(13,4)"></div>
+        <div class="ytreRad">Stor Straight</div>
+        <div class="rad14 kolonne1" onclick="storStraight(14,1)"></div>
+        <div class="rad14 kolonne2" onclick="storStraight(14,2)"></div>
+        <div class="rad14 kolonne3" onclick="storStraight(14,3)"></div>
+        <div class="rad14 kolonne4" onclick="storStraight(14,4)"></div>
+        <div class="ytreRad">Hus</div>
+        <div class="rad15 kolonne1" onclick="hus(15,1)"></div>
+        <div class="rad15 kolonne2" onclick="hus(15,2)"></div>
+        <div class="rad15 kolonne3" onclick="hus(15,3)"></div>
+        <div class="rad15 kolonne4" onclick="hus(15,4)"></div>
+        <div class="ytreRad">Sjanse</div>
+        <div class="rad16 kolonne1" onclick="sjanse(16,1)"></div>
+        <div class="rad16 kolonne2" onclick="sjanse(16,2)"></div>
+        <div class="rad16 kolonne3" onclick="sjanse(16,3)"></div>
+        <div class="rad16 kolonne4" onclick="sjanse(16,4)"></div>
+        <div class="ytreRad" style="font-weight:700;">Yatzy</div>
+        <div class="rad17 kolonne1" onclick="yatzy(17,1)"></div>
+        <div class="rad17 kolonne2" onclick="yatzy(17,2)"></div>
+        <div class="rad17 kolonne3" onclick="yatzy(17,3)"></div>
+        <div class="rad17 kolonne4" onclick="yatzy(17,4)"></div>
+        <div class="ytreRad" style="font-weight: 700;">Totalsum</div>
+        <div class="rad18 kolonne1" onclick="totalSum(18,1)"></div>
+        <div class="rad18 kolonne2" onclick="totalSum(18,2)"></div>
+        <div class="rad18 kolonne3" onclick="totalSum(18,3)"></div>
+        <div class="rad18 kolonne4" onclick="totalSum(18,4)"></div>
+    </section>
+    <button onclick="sjekkVinner()">Sjekk vinner</button>
+
+
+    <script src="javaYatzy.js"></script>
+</body>
+
+</html>
