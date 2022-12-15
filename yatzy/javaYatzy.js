@@ -62,7 +62,7 @@ function lagre(radNummer, kolonneNummer) {
         if (terningSvar[i].style.backgroundColor == "green") {
             resultat += Number(terningSvar[i].src[46]);
             antallGronne++;
-        alert(terningSvar[i].src)
+        alert(terningSvar[i].src[46])
         }
         if (resultat / antallGronne == radNummer) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
