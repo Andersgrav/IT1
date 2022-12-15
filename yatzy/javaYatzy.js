@@ -57,11 +57,12 @@ Kun summen av enkelt tallene (ikke hus, yatzy osv)*/
 function lagre(radNummer, kolonneNummer) {
     var resultat = 0;
     var antallGronne = 0;
+    
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
             resultat += Number(terningSvar[i].src[84]);
             antallGronne++;
-
+        alert(terningSvar[i].src)
         }
         if (resultat / antallGronne == radNummer) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
