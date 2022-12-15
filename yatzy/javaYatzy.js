@@ -60,7 +60,7 @@ function lagre(radNummer, kolonneNummer) {
     
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[7]);
             antallGronne++;
         alert(terningSvar[i].src)
         }
