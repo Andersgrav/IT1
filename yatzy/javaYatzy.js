@@ -60,7 +60,7 @@ function lagre(radNummer, kolonneNummer) {
     
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[7]);
+            resultat += Number(terningSvar[i].src[46]);
             antallGronne++;
         alert(terningSvar[i].src)
         }
@@ -104,11 +104,11 @@ function par1(radNummer, kolonneNummer) {
 
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[46]);
 
         }
         
-        if (resultat / 2 == Number(terningSvar[i].src[84]) || resultat == 0) {
+        if (resultat / 2 == Number(terningSvar[i].src[46]) || resultat == 0) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
         }
         else {
@@ -127,8 +127,8 @@ function par2(radNummer, kolonneNummer) {
     parArray = []
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
-            parArray.unshift(Number(terningSvar[i].src[84]))
+            resultat += Number(terningSvar[i].src[46]);
+            parArray.unshift(Number(terningSvar[i].src[46]))
         }
         if (resultat / 2 == Math.max(...parArray) + Math.min(...parArray) || resultat == 0) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
@@ -146,10 +146,10 @@ function like3(radNummer, kolonneNummer) {
     var antallGronne = 0;
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[46]);
             antallGronne++;
         }
-        if (antallGronne == 3 && resultat / 3 == Number(terningSvar[i].src[84]) || resultat == 0) {
+        if (antallGronne == 3 && resultat / 3 == Number(terningSvar[i].src[46]) || resultat == 0) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
         }
         else {
@@ -164,9 +164,9 @@ function like4(radNummer, kolonneNummer) {
     var resultat = 0;
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[46]);
         }
-        if (resultat / 4 == Number(terningSvar[i].src[84]) || resultat == 0) {
+        if (resultat / 4 == Number(terningSvar[i].src[46]) || resultat == 0) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
         }
         else {
@@ -184,8 +184,8 @@ function litenStraight(radNummer, kolonneNummer) {
     var sjekkArray = [];
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
-            sjekkArray.unshift(Number(terningSvar[i].src[84]))
+            resultat += Number(terningSvar[i].src[46]);
+            sjekkArray.unshift(Number(terningSvar[i].src[46]))
         }
 
         if (resultat == 15 && sjekkArray.includes(1 && 2 && 3 && 4 && 5) || resultat == 0) {
@@ -205,8 +205,8 @@ function storStraight(radNummer, kolonneNummer) {
     var sjekkArray = [];
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
-            sjekkArray.unshift(Number(terningSvar[i].src[84]))
+            resultat += Number(terningSvar[i].src[46]);
+            sjekkArray.unshift(Number(terningSvar[i].src[46]))
         }
         if (resultat == 20 && sjekkArray.includes(2 && 3 && 4 && 5 && 6) || resultat == 0) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
@@ -224,8 +224,8 @@ function hus(radNummer, kolonneNummer) {
     var sjekkArray = [];
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
-            sjekkArray.unshift(Number(terningSvar[i].src[84]))
+            resultat += Number(terningSvar[i].src[46]);
+            sjekkArray.unshift(Number(terningSvar[i].src[46]))
 
         }
     }
@@ -256,7 +256,7 @@ function sjanse(radNummer, kolonneNummer) {
     var resultat = 0;
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[46]);
         }
         seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = resultat;
         terningSvar[i].style.backgroundColor = "black";
@@ -269,10 +269,10 @@ function yatzy(radNummer, kolonneNummer) {
     var antallGronne = 0;
     for (let i = 0; i < terningSvar.length; i++) {
         if (terningSvar[i].style.backgroundColor == "green") {
-            resultat += Number(terningSvar[i].src[84]);
+            resultat += Number(terningSvar[i].src[46]);
             antallGronne++;
         }
-        if (resultat == terningSvar[1].src[84] * 5 && antallGronne == 5) {
+        if (resultat == terningSvar[1].src[46] * 5 && antallGronne == 5) {
             seksjonArray[radNummer - 1][kolonneNummer - 1].innerHTML = 50;
         }
         else {
