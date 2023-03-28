@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blippespill</title>
+    <style>
+        div {
+            position: absolute;
+            background-color: blue;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="farge" type="color">
+    <audio src="Blipp.wav"></audio>
+    <p id="teller">0</p>
+    <button onclick="start()" id="start">Start</button>
+
+    <script>
+        var lyd = new Audio("Blipp.wav");
+        var tellerP = document.getElementById("teller");
+        var teller = 0;
+        var ny = true;
+        var startBtn = document.getElementById("start")
+        
+        var farge = document.getElementById("farge");
+
+        var fjern = function (evt) {
+
+            evt.stopPropagation();
+            if (!ny) {
+                var minAnim = evt.target.animate([{ transform: "scale(1)" }, { transform: "scale(2)" }], 100)
+                minAnim.onfinish = function () {
+                    document.body.removeChild(evt.target);
+                    lyd.play();
+                    teller++
+                    tellerP.innerHTML = teller;
+                }
+            }
+            ny = false;
+        }
+        
+        farge.hidden = true;
+        tellerP.hidden = true;
+        var startSpill = false;
+
+        startBtn.onclick = function (evtS){
+            evtS.stopPropagation();
+        }
+
+        function start(){
+            farge.hidden = false;
+            tellerP.hidden = false;
+            startSpill = true;
+            for(i=0;i <= 10;i++){
+
+            }
+        }
+        window.onclick = function (evt) {
+            if (startSpill == true) {
+                ny = true
+                evt.stopPropagation();
+                var mittElement = document.createElement("div");
+                mittElement.style.top = evt.clientY - 25 + "px";
+                mittElement.style.left = evt.clientX - 25 + "px";
+                mittElement.style.backgroundColor = farge.value;
+                document.body.appendChild(mittElement);
+                mittElement.onmouseenter = fjern;
+            }
+        }
+        
+        farge.onclick = function (event) {
+            event.stopPropagation();
+        }
+        
+
+      
+
+
+    </script>
+</body>
+
+</html>
