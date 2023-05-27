@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#spillet{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+#spiller{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+/*Lager en amimasjon slik at det ser ut som at spilleren hopper*/
+.animate{
+    animation: hopp 500ms;
+}
+@keyframes hopp{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+/*Lager en animasjon alik at den blå blokken beveger seg mot spilleren*/
+#blokk{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: blokk 1s infinite linear;
+}
+@keyframes blokk{
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
+button{
+    font-size: 60px;
+}
